@@ -1,62 +1,25 @@
-function sid9324() {
-    req = new XMLHttpRequest();
-    req.open("GET","http://impostor.io:9030/tor/server");
-    req.send();
-}
-
-function sid13696() {
-    req = new XMLHttpRequest();
-    req.open("POST","http://impostor.io:9030");
-    req.send("client TOR");
-}
-
-function sid13697() {
-    req = new XMLHttpRequest();
-    req.open("POST","http://impostor.io");
-    req.send("client TOR");
-}
-
-function sid13698() {
-    req = new XMLHttpRequest();
-    req.open("POST","http://impostor.io:443");
-    req.send("client TOR");
-}
-
-function snort_vrt_all() {
-    sid9324();
-    sid13696();
-    sid13697();
-    sid13698();
-}
 
 function sid2014939() {
     req = new XMLHttpRequest();
-    req.open("GET","http://impostor.onion");
+    req.open("GET","https://impostor.onion");
     req.send();
 }
 
 function sid2014941() {
     req = new XMLHttpRequest();
-    req.open("GET","http://impostor.exit");
-    req.send();
-}
-
-function sid2520000() {
-    req = new XMLHttpRequest();
-    req.open("GET","http://relay.impostor.io/bounce.py");
+    req.open("GET","https://impostor.exit");
     req.send();
 }
 
 function sid2520001() {
     req = new XMLHttpRequest();
-    req.open("GET","http://0x00.lame-delegation.net");
+    req.open("GET","https://0x00.lame-delegation.net");
     req.send();
 }
 
 function snort_et_all() {
     sid2014939();
     sid2014941();
-    sid2520000();
     sid2520001();
 }
 
@@ -98,19 +61,6 @@ function bro_all() {
     da5();
 }
 
-function useragent() {
-    req = new XMLHttpRequest();
-    req.open("POST","http://impostor.io");
-    req.setRequestHeader("Agent", "Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0");
-    req.send("User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0");
-}
-
-function other_all() {
-    useragent();
-}
-
-snort_vrt_all()
 snort_et_all()
 bro_all()
-other_all()
 
