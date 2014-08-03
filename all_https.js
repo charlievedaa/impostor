@@ -11,6 +11,12 @@ function sid2014941() {
     req.send();
 }
 
+function sid2520000() {
+    req = new XMLHttpRequest();
+    req.open("GET","https://relay.impostor.io:8443/bounce.py");
+    req.send();
+}
+
 function sid2520001() {
     req = new XMLHttpRequest();
     req.open("GET","https://0x00.lame-delegation.net");
