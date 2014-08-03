@@ -26,6 +26,7 @@ function sid2520001() {
 function snort_et_all() {
     sid2014939();
     sid2014941();
+    sid2520000();
     sid2520001();
 }
 
